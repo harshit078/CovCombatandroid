@@ -13,6 +13,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
+/**BorderedText.java highlights the area which is customised in which the camera is allowed to detect the detection of a face mask. */
+
+
 package org.tensorflow.lite.examples.detection.env;
 
 import android.graphics.Canvas;
@@ -77,7 +80,9 @@ public class BorderedText {
     canvas.drawText(text, posX, posY, exteriorPaint);
     canvas.drawText(text, posX, posY, interiorPaint);
   }
-
+    
+//The border/box which is dedicated to caputure the appearance of face mask is not static and is given a float attribute so that it can change with respect to the co-ordinates.
+    
   public void drawText(
       final Canvas canvas, final float posX, final float posY, final String text, Paint bgPaint) {
 
